@@ -13,6 +13,9 @@ script:
   - dotnet restore
   - dotnet publish -c Release
 
+before_deploy:
+  - touch bin/Release/netstandard2.0/publish/BlazorApp/dist/.nojekyll
+
 deploy:
   provider: pages
   skip-cleanup: true
