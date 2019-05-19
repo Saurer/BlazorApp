@@ -11,7 +11,7 @@ mono: none
 script:
   - sudo snap alias dotnet-sdk.dotnet dotnet
   - dotnet restore
-  - dotnet public -c Release
+  - dotnet publish -c Release
 
 deploy:
   provider: pages
